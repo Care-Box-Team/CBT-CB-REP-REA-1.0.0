@@ -1,7 +1,10 @@
 import React from "react";
+import { Card } from "./Card/Card";
 
 export default function Root(props) {
   return (
-    <section>El proyecto {props.name} para cliente, esta funcionando!</section>
+    <div>
+      <Card />
+    </div>
   );
 }
