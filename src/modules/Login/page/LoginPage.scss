@@ -1,0 +1,44 @@
+@import "~styles/abstracts/mixins";
+@import "~styles/abstracts/variables";
+.login-container {
+  width: 100%;
+
+  & .left-panel {
+    width: 30%;
+    padding: 64px;
+
+    & .login-logo {
+      margin-bottom: 64px;
+      & p {
+        margin-top: 8px;
+      }
+    }
+
+    & .login-title {
+      margin-bottom: 32px;
+      & h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @include responsive(tablet) {
+      padding: 32px;
+      width: 100%;
+    }
+
+    & .register-label {
+      margin-top: 48px;
+    }
+  }
+  & .right-panel {
+    width: 70%;
+    background: url("../../../assets/Login.png");
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    @include responsive(tablet) {
+      width: 0%;
+    }
+  }
+}

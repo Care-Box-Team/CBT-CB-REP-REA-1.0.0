@@ -1,10 +1,9 @@
 module.exports = {
-  rootDir: "src",
   transform: {
     "^.+\\.(j|t)sx?$": "babel-jest",
   },
   moduleNameMapper: {
-    "\\.(css)$": "identity-obj-proxy",
+    "\\.(scss|png)$": "identity-obj-proxy",
   },
-  setupFilesAfterEnv: ["@testing-library/jest-dom"],
+  setupFilesAfterEnv: ["<rootDir>src/setupTests.js"],
 };

@@ -1,0 +1,12 @@
+.login-form-container {
+  .field {
+    margin-bottom: 24px;
+    & label {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+  }
+  .submit-btn {
+    margin-top: 32px;
+  }
+}
