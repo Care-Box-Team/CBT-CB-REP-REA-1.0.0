@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { expect } from "chai";
 import { LoginPage } from "../modules/Login/page/LoginPage";
 import { LoginForm } from "../modules/Login/components/Form/LoginForm";
-import { expect } from "chai";
 
 describe("Login Page component", () => {
   const wrapper = shallow(<LoginPage />);

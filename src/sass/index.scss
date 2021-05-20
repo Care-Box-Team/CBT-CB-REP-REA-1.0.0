@@ -2,6 +2,8 @@
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
 
+@import "./components/label";
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;

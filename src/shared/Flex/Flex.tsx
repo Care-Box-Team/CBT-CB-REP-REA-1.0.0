@@ -45,12 +45,21 @@ type FlexDirection =
   | "column-reverse"
   | "row"
   | "row-reverse";
-
+type FlexWrap =
+  | "-moz-initial"
+  | "inherit"
+  | "initial"
+  | "nowrap"
+  | "revert"
+  | "unset"
+  | "wrap"
+  | "wrap-reverse";
 interface IProps {
   justifyContent?: JustifyContent;
   alignItems?: AlignItems;
   direction?: FlexDirection;
   className?: string;
+  flexWrap?: FlexWrap;
 }
 
 export const Flex: React.FC<IProps> = ({
@@ -59,6 +68,7 @@ export const Flex: React.FC<IProps> = ({
   justifyContent,
   direction,
   className,
+  flexWrap,
 }) => {
   return (
     <div
@@ -66,6 +76,7 @@ export const Flex: React.FC<IProps> = ({
       style={{
         display: "flex",
         width: "100%",
+        flexWrap: flexWrap || "wrap",
         flexDirection: direction || "row",
         position: "relative",
         alignItems: alignItems || "initial",

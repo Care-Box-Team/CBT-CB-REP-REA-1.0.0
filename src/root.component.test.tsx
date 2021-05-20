@@ -3,26 +3,30 @@ import { shallow } from "enzyme";
 import Root from "./root.component";
 import { Redirect, Route } from "react-router";
 import { LoginPage } from "./modules/Login/page/LoginPage";
+import { expect } from "chai";
 
 describe("Root component", () => {
+  const wrapper = shallow(<Root />);
   it("should be container Login Page in Route", () => {
-    const wrapper = shallow(<Root />);
     expect(
       wrapper.contains(
         <Route exact={true} path="/client/login">
           <LoginPage />
         </Route>
       )
-    ).toBeTruthy();
+    ).to.be.true;
   });
   it("should be container Root Page in Route", () => {
-    const wrapper = shallow(<Root />);
     expect(
       wrapper.contains(
         <Route exact path="/client">
           <Redirect to="/client/login" />
         </Route>
       )
-    ).toBeTruthy();
+    ).to.be.true;
+  });
+
+  it("shoudl contains 4 routes", () => {
+    expect(wrapper.find(Route)).to.have.length(4);
   });
 });

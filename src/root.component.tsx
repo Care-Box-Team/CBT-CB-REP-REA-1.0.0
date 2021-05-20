@@ -5,7 +5,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { HomePage } from "./modules/Application/Home/Page/HomePage";
 import { LoginPage } from "./modules/Login/page/LoginPage";
+import { RegisterPage } from "./modules/Register/page/Register/RegisterPage";
 import "./sass/index.scss";
 export default function Root() {
   return (
@@ -16,6 +18,12 @@ export default function Root() {
         </Route>
         <Route exact={true} path="/client/login">
           <LoginPage />
+        </Route>
+        <Route exact={true} path="/client/register">
+          <RegisterPage />
+        </Route>
+        <Route exact={true} path="/client/home">
+          <HomePage />
         </Route>
       </Switch>
     </Router>

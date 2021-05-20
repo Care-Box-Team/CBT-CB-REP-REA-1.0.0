@@ -20,7 +20,7 @@ export const LoginPage: React.FC = () => {
         <div className="register-label">
           <p>
             ¿No tienes una cuenta?{" "}
-            <Link to="/clien/register"> Registráte aquí </Link>
+            <Link to="/client/register"> Registráte aquí </Link>
           </p>
         </div>
       </div>

@@ -10,6 +10,7 @@ interface IProps {
   width?: string;
   type: typeButton;
   className?: string;
+  disable?: boolean;
 }
 export const Button: React.FC<IProps> = (props) => {
   return (
@@ -17,7 +18,7 @@ export const Button: React.FC<IProps> = (props) => {
       <button
         className={props.className}
         type={props.type}
-        disabled={props.loading}
+        disabled={props.loading || props.disable}
         onClick={props.onClick}
         style={{
           width: props.width || "fit-content",

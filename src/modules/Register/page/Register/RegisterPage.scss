@@ -1,0 +1,30 @@
+@import "~styles/abstracts/mixins";
+@import "~styles/abstracts/variables";
+.register-container {
+  width: 50%;
+  margin: 64px auto 0 auto;
+  position: relative;
+  & .back-arrow-container {
+    margin-bottom: 48px;
+    cursor: pointer;
+    & * {
+      text-decoration: none;
+    }
+    & p {
+      font-size: 12px;
+      color: #7a7a7a;
+      margin-left: 4px;
+    }
+  }
+  & .title-form {
+    margin-bottom: 48px;
+    @include responsive(tablet) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include responsive(tablet) {
+    width: 80%;
+    margin: 24px auto 0 auto;
+  }
+}
