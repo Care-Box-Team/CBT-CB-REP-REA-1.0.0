@@ -9,4 +9,9 @@
   .submit-btn {
     margin-top: 32px;
   }
+
+  & .error {
+    color: #ff4343;
+    margin: 12px 0;
+  }
 }

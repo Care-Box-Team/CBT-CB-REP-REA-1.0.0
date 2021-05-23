@@ -1,40 +1,36 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 import { Button } from "../../../../shared/Button/Button";
 import { Flex } from "../../../../shared/Flex/Flex";
 import { Input } from "../../../../shared/Input/Input";
+import { useAuthentication } from "../../hooks/useAuthentication";
 import "./LoginForm.scss";
 export const LoginForm: React.FC = () => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const {
+    emailInputProps,
+    error,
+    loading,
+    onSubmit,
+    passwordInputProps,
+    success,
+  } = useAuthentication();
+
+  if (success) {
+    return <Redirect to="/client/home" />;
+  }
   return (
-    <form className="login-form-container">
+    <form onSubmit={onSubmit} className="login-form-container">
       <Flex direction="column" className="field">
         <label htmlFor="email">Email</label>
-        <Input
-          name="email"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          placeholder="Ingrese su correo electrónico"
-          type="text"
-          value={email}
-        />
+        <Input {...emailInputProps} />
       </Flex>
       <Flex direction="column" className="field">
         <label htmlFor="password">Contraseña</label>
-        <Input
-          name="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          placeholder="Ingrese su contraseña"
-          type="password"
-          isSecure={true}
-          value={password}
-        />
+        <Input {...passwordInputProps} />
       </Flex>
+      {error && <p className="error">Las credenciales no son correctas.</p>}
       <Flex className="submit-btn">
-        <Button loading={false} text={"Ingresar"} type={"submit"} />
+        <Button loading={loading} text={"Ingresar"} type={"submit"} />
       </Flex>
     </form>
   );

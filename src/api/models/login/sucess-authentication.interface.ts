@@ -1,7 +1,7 @@
 import { IClient } from "../client/client.interface";
 
-export interface SuccessRegisterResponse {
-  client: IClient;
+export interface SuccessAuthenticationResponse {
+  client?: IClient;
   message: string;
   status: number;
 }

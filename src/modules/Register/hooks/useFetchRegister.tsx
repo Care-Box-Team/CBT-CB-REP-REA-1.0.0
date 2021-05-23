@@ -122,6 +122,7 @@ export const useFetchRegister = () => {
         payload
       );
       LocalStorage.saveIdClient(res.data.client.idClient);
+      LocalStorage.saveEmailClient(res.data.client.userLogin.email);
       setLoading(false);
     } catch (_) {
       setLoading(false);
