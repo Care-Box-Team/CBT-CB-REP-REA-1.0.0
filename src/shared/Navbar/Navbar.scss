@@ -1,0 +1,36 @@
+.header {
+  height: 64px;
+  padding: 16px 128px 16px 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+
+  & .menu-items-container {
+    width: fit-content !important;
+
+    & li.active-link {
+      color: #242449;
+    }
+    & li.no-active-link {
+      color: #acacac;
+    }
+    & li {
+      margin: 0 24px;
+      & a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header {
+    padding: 16px 64px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 16px 32px;
+  }
+}

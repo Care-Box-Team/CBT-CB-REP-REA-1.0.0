@@ -3,7 +3,7 @@ module.exports = {
     "^.+\\.(j|t)sx?$": "babel-jest",
   },
   moduleNameMapper: {
-    "\\.(scss|png)$": "identity-obj-proxy",
+    "\\.(scss|png|svg)$": "identity-obj-proxy",
   },
   setupFilesAfterEnv: ["<rootDir>src/setupTests.js"],
 };

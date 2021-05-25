@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { HomePage } from "./modules/Application/Home/Page/HomePage";
+import { HomePage } from "./modules/Application/Home/page/HomePage";
 import { LoginPage } from "./modules/Login/page/LoginPage";
 import { RegisterPage } from "./modules/Register/page/Register/RegisterPage";
 import "./sass/index.scss";
@@ -22,7 +22,7 @@ export default function Root() {
         <Route exact={true} path="/client/register">
           <RegisterPage />
         </Route>
-        <Route exact={true} path="/client/home">
+        <Route path="/client/home">
           <HomePage />
         </Route>
       </Switch>
