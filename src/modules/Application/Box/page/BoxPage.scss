@@ -1,0 +1,11 @@
+.box-container {
+  width: 100% !important ;
+  margin: 128px auto 0 auto;
+  &__sidebar {
+    width: 30% !important;
+  }
+
+  &__list {
+    width: 70% !important;
+  }
+}

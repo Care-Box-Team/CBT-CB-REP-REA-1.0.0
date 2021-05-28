@@ -1,0 +1,25 @@
+.sidebar-filter {
+  padding: 64px;
+  & h4 {
+    font-size: 14px;
+    color: #242424;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  & .filter-section {
+    margin-top: 64px;
+    & label {
+      width: 120px;
+    }
+    & input {
+      width: 64px !important;
+      text-align: center;
+    }
+    & h4 {
+      margin-bottom: 32px;
+    }
+    & .field {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.list-box-container {
+  width: 90% !important;
+}
+.list-boxs {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 12px;
+  margin-top: 24px;
+}
