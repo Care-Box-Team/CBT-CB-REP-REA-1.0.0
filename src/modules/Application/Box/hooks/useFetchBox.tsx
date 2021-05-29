@@ -12,7 +12,6 @@ export const useFetchBox = () => {
   const [success, setSuccess] = useState<boolean>(false);
 
   async function fetchProducts(params?: IFilterParams) {
-    console.log("lleangod.");
     setLoading(true);
     setError(false);
     setSuccess(false);

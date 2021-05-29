@@ -1,0 +1,12 @@
+.profile-container {
+  width: 40% !important;
+  margin: 96px auto 0 auto;
+  & .profile-header {
+    width: 100% !important;
+  }
+
+  & .view-information-btn {
+    color: #646464;
+    cursor: pointer;
+  }
+}

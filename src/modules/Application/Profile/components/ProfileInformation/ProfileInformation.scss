@@ -1,0 +1,14 @@
+.profile-information-container {
+  position: relative;
+  margin-top: 48px;
+  & .field-group {
+    margin-bottom: 24px;
+  }
+  & .rigth-field {
+    width: 30% !important;
+  }
+  & .label {
+    color: #646464;
+    margin-bottom: 4px;
+  }
+}

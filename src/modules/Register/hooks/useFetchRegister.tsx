@@ -121,8 +121,7 @@ export const useFetchRegister = () => {
         "/login/clientRegister",
         payload
       );
-      LocalStorage.saveIdClient(res.data.client.idClient);
-      LocalStorage.saveEmailClient(res.data.client.userLogin.email);
+      LocalStorage.saveClient(res.data)
       setLoading(false);
     } catch (_) {
       setLoading(false);

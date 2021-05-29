@@ -10,10 +10,9 @@ export const BoxPage: React.FC = () => {
 
   const onFilterBox = async (params: IFilterParams): Promise<void> => {
     try {
-      console.log("asdas");
       await fetchProducts(params);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

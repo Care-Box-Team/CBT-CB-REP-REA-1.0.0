@@ -4,6 +4,7 @@ import { AuthenticationRequest } from "../../../api/models/login/authentication.
 import { SuccessRegisterResponse } from "../../../api/models/register/sucess-register.interface";
 import { HandleFormEvent, HandleInputEvent } from "../../../constant/dom-event";
 import { InputProps } from "../../../shared/Input/Input";
+import { LocalStorage } from "../../../utils/LocalStorage";
 
 export const useAuthentication = () => {
   const [email, setEmail] = useState<string>("");
@@ -36,6 +37,7 @@ export const useAuthentication = () => {
       if (res.data.status === 1) {
         setLoading(false);
         setSuccess(true);
+        LocalStorage.saveClient(res.data)
       } else {
         setLoading(false);
         setError(true);

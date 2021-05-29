@@ -1,0 +1,15 @@
+.form-container-edit-user {
+  margin-top: 48px;
+  & .field-group {
+    margin-bottom: 24px;
+  }
+  & .field {
+    width: 48% !important;
+  }
+
+  & .label,
+  & label {
+    margin-bottom: 8px;
+    color: #646464;
+  }
+}
