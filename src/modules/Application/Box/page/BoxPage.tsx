@@ -6,7 +6,7 @@ import { IFilterParams, useFetchBox } from "../hooks/useFetchBox";
 import "./BoxPage.scss";
 
 export const BoxPage: React.FC = () => {
-  const { fetchProducts, boxes } = useFetchBox();
+  const { fetchProducts, boxes,savedBoxes } = useFetchBox();
 
   const onFilterBox = async (params: IFilterParams): Promise<void> => {
     try {
@@ -22,7 +22,7 @@ export const BoxPage: React.FC = () => {
         <BoxFilterSidebar onFilterBox={onFilterBox} />
       </Flex>
       <Flex className="box-container__list">
-        <BoxList boxes={boxes} />
+        <BoxList boxes={boxes} savedBoxes={savedBoxes} />
       </Flex>
     </Flex>
   );

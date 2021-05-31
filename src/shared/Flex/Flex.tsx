@@ -60,6 +60,7 @@ interface IProps {
   direction?: FlexDirection;
   className?: string;
   flexWrap?: FlexWrap;
+  onClick?(): void;
 }
 
 export const Flex: React.FC<IProps> = ({
@@ -69,6 +70,7 @@ export const Flex: React.FC<IProps> = ({
   direction,
   className,
   flexWrap,
+  onClick
 }) => {
   return (
     <div
@@ -82,6 +84,7 @@ export const Flex: React.FC<IProps> = ({
         alignItems: alignItems || "initial",
         justifyContent: justifyContent || "initial",
       }}
+      onClick={onClick}
     >
       {children}
     </div>
