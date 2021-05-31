@@ -2,13 +2,12 @@ import React from "react";
 import "./BoxCard.scss";
 import BoxDefaulImage from "../../../../../assets/box-default.png";
 import { Flex } from "../../../../../shared/Flex/Flex";
+import { Box } from "../../../../../api/models/box/box.interface";
 
 interface IProps {
-  id: number;
-  name: string;
-  price: string;
+  box: Box;
 }
-export const BoxCard: React.FC<IProps> = ({ id, name, price }) => {
+export const BoxCard: React.FC<IProps> = ({ box }) => {
   return (
     <Flex
       justifyContent="space-between"
@@ -19,8 +18,8 @@ export const BoxCard: React.FC<IProps> = ({ id, name, price }) => {
         <img src={BoxDefaulImage} alt="Default" />
       </Flex>
       <Flex className="description" direction="column">
-        <h4>{name} </h4>
-        <p>{price}</p>
+        <h4>{box.name} </h4>
+        <p>S/.{box.price}</p>
       </Flex>
     </Flex>
   );

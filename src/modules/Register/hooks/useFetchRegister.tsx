@@ -121,7 +121,7 @@ export const useFetchRegister = () => {
         "/login/clientRegister",
         payload
       );
-      LocalStorage.saveClient(res.data)
+      LocalStorage.saveClient(res.data);
       setLoading(false);
     } catch (_) {
       setLoading(false);

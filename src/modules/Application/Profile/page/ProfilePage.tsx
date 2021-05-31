@@ -8,9 +8,10 @@ import "./ProfilePage.scss";
 export const ProfilePage: React.FC = () => {
   const [isEditingMode, setEditingMode] = useState<boolean>(false);
 
-  const changeEditionMode = () => {
+  const changeEditionMode = (): void => {
     setEditingMode((prev) => !prev);
   };
+
   return (
     <Flex direction="column" className="profile-container">
       <Flex
@@ -28,9 +29,9 @@ export const ProfilePage: React.FC = () => {
           />
         )}
         {isEditingMode && (
-          <p className="view-information-btn" onClick={changeEditionMode}>
-            Cancelar
-          </p>
+          <div aria-hidden="true" onClick={changeEditionMode}>
+            <p className="view-information-btn">Cancelar</p>
+          </div>
         )}
       </Flex>
       {!isEditingMode && <ProfileInformation />}

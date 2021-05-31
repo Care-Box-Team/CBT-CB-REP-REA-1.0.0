@@ -37,7 +37,7 @@ export const useAuthentication = () => {
       if (res.data.status === 1) {
         setLoading(false);
         setSuccess(true);
-        LocalStorage.saveClient(res.data)
+        LocalStorage.saveClient(res.data);
       } else {
         setLoading(false);
         setError(true);

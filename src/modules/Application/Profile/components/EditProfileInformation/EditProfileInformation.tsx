@@ -16,16 +16,15 @@ export const EditProfileInformation: React.FC = () => {
     loading,
   } = useEditProfileForm();
 
-
-  const updateProfile = async (e:HandleFormEvent): Promise<void> => {
-    e.preventDefault()
+  const updateProfile = async (e: HandleFormEvent): Promise<void> => {
+    e.preventDefault();
     try {
-        await onSubmit(e)
-        window.location.reload()
+      await onSubmit(e);
+      window.location.reload();
     } catch (error) {
-        console.error("")
+      console.error("");
     }
-  }
+  };
   return (
     <form onSubmit={updateProfile} className="form-container-edit-user">
       <Flex

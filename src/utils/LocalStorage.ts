@@ -8,11 +8,11 @@ export class LocalStorage {
     localStorage.setItem("email", email);
   }
 
-  static saveClient(client:SuccessRegisterResponse):void {
-    localStorage.setItem("name", client.client.names)
-    localStorage.setItem("lastname", client.client.lastNames)
-    localStorage.setItem("phone", client.client.phone)
-    localStorage.setItem("address", client.client.adress)
-    localStorage.setItem("email", client.client.userLogin.email)
+  static saveClient(client: SuccessRegisterResponse): void {
+    localStorage.setItem("name", client.client.names);
+    localStorage.setItem("lastname", client.client.lastNames);
+    localStorage.setItem("phone", client.client.phone);
+    localStorage.setItem("address", client.client.adress);
+    localStorage.setItem("email", client.client.userLogin.email);
   }
 }

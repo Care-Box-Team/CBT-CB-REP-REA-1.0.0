@@ -73,7 +73,7 @@ export const useEditProfileForm = () => {
 
   const onSubmit = async (e: HandleFormEvent): Promise<void> => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     try {
       const body = {
         adress: addres,
@@ -82,12 +82,15 @@ export const useEditProfileForm = () => {
         names: name,
         phone: phone,
       };
-      const res = await http.put<SuccessRegisterResponse>("/clients/updateProfile", body);
-      LocalStorage.saveClient(res.data)
+      const res = await http.put<SuccessRegisterResponse>(
+        "/clients/updateProfile",
+        body
+      );
+      LocalStorage.saveClient(res.data);
     } catch (error) {
       console.error(error);
     } finally {
-        setLoading(false)
+      setLoading(false);
     }
   };
 
@@ -98,6 +101,6 @@ export const useEditProfileForm = () => {
     phoneInputProps,
     emailInputProps,
     onSubmit,
-    loading
+    loading,
   };
 };
