@@ -44,8 +44,7 @@ export const BoxDetailPage: React.FC = () => {
           </div>
         </div>
         <div className="right-column">
-
-        <h2>gA</h2>
+          <h2>gA</h2>
         </div>
       </Flex>
     );

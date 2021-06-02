@@ -7,7 +7,7 @@ import { ProfilePage } from "../../Profile/page/ProfilePage";
 import { BoxContrusction } from "../components/BoxConstruction/BoxConstruction";
 import { HomePanel } from "../components/Panel/HomePanel";
 
-export const HomePage: React.FC = () => {
+export const MainPage: React.FC = () => {
   let { path } = useRouteMatch();
 
   return (

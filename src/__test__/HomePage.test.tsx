@@ -1,8 +1,7 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { shallow } from "enzyme";
 import { expect } from "chai";
 import { HomePage } from "../modules/Application/Home/page/HomePage";
-import { Navbar } from "../shared/Navbar/Navbar";
 import { MemoryRouter } from "react-router";
 
 describe("Home Page component", () => {
