@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { MainPage } from "./modules/Application/Home/page/HomePage";
+import { MainPage } from "./modules/Application/Home/Page/HomePage";
 import { LoginPage } from "./modules/Login/page/LoginPage";
 import { RegisterPage } from "./modules/Register/page/Register/RegisterPage";
 

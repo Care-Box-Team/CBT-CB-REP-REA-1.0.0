@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { expect } from "chai";
-import { HomePage } from "../modules/Application/Home/page/HomePage";
+import { HomePage } from "../modules/Application/Home/Page/HomePage";
 import { MemoryRouter } from "react-router";
 
 describe("Home Page component", () => {
