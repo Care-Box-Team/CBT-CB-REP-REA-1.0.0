@@ -70,11 +70,12 @@ export const Flex: React.FC<IProps> = ({
   direction,
   className,
   flexWrap,
-  onClick
+  onClick,
 }) => {
   return (
     <div
       className={className}
+      aria-hidden="true"
       style={{
         display: "flex",
         width: "100%",

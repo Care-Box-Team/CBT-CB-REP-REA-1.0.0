@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router";
 import { Navbar } from "../../../../shared/Navbar/Navbar";
 import { BoxPage } from "../../Box/page/BoxPage";
+import { BoxDetailPage } from "../../BoxDetail/pages/BoxDetailPage";
 import { ProfilePage } from "../../Profile/page/ProfilePage";
 import { BoxContrusction } from "../components/BoxConstruction/BoxConstruction";
 import { HomePanel } from "../components/Panel/HomePanel";
@@ -28,6 +29,9 @@ export const HomePage: React.FC = () => {
         </Route>
         <Route exact={true} path={`${path}/profile`}>
           <ProfilePage />
+        </Route>
+        <Route exact={true} path={`${path}/boxs/:id`}>
+          <BoxDetailPage />
         </Route>
       </Switch>
     </div>

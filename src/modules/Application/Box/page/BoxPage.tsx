@@ -6,7 +6,7 @@ import { IFilterParams, useFetchBox } from "../hooks/useFetchBox";
 import "./BoxPage.scss";
 
 export const BoxPage: React.FC = () => {
-  const { fetchProducts, boxes,savedBoxes } = useFetchBox();
+  const { fetchProducts, boxes, savedBoxes } = useFetchBox();
 
   const onFilterBox = async (params: IFilterParams): Promise<void> => {
     try {
