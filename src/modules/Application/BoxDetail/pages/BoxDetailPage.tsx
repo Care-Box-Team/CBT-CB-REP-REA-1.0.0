@@ -6,6 +6,7 @@ import { useFetchBox } from "../../Box/hooks/useFetchBox";
 import TruckLogo from "../../../../assets/Truck.svg";
 import "./BoxDetailPage.scss";
 import { Button } from "../../../../shared/Button/Button";
+import { BoxProductList } from "../components/ProdutList/BoxProductList";
 
 export const BoxDetailPage: React.FC = () => {
   let { id } = useParams<{ id: string }>();
@@ -43,9 +44,9 @@ export const BoxDetailPage: React.FC = () => {
             </Flex>
           </div>
         </div>
-        <div className="right-column">
-          <h2>gA</h2>
-        </div>
+        <Flex justifyContent="center" className="right-column">
+          <BoxProductList products={box.products} />
+        </Flex>
       </Flex>
     );
   }

@@ -1,9 +1,13 @@
 .box-detail-container {
-  margin: 64px auto 0 auto;
+  margin: 64px auto 64px auto;
   width: 90% !important;
 
   & .left-column {
     width: 40%;
+  }
+
+  & .right-column {
+    width: 60% !important;
   }
 
   & .rigth & .title-box {
@@ -16,8 +20,18 @@
     color: #484856;
     margin-top: 12px;
   }
+  & .suscription-title {
+    margin-top: 180px;
+    margin-bottom: 12px;
+  }
   & .suscription-container {
     background: #fafcfe;
     padding: 48px 64px;
+    & img {
+      margin-right: 24px;
+    }
+    & p {
+      margin-bottom: 24px;
+    }
   }
 }

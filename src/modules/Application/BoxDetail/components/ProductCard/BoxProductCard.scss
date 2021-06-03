@@ -1,0 +1,23 @@
+.box-product-card {
+  & .image-container {
+    width: 360px !important;
+    height: 360px;
+    margin-bottom: 20px;
+    background: #fafcfe;
+    & img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  & .product-name {
+    width: 320px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  & .brand-name {
+    font-size: 13px;
+    color: #000;
+    margin-top: 4px;
+  }
+}
