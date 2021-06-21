@@ -14,14 +14,16 @@
     font-size: 32px;
     color: #242424;
   }
-
+  & .sub {
+    margin-bottom: 24px;
+  }
   & .price-box {
     font-size: 16px;
     color: #484856;
     margin-top: 12px;
+    margin-bottom: 180px;
   }
   & .suscription-title {
-    margin-top: 180px;
     margin-bottom: 12px;
   }
   & .suscription-container {
@@ -33,5 +35,10 @@
     & p {
       margin-bottom: 24px;
     }
+  }
+
+  & .button-unsubscribe {
+    height: fit-content;
+    background: #ff1d61;
   }
 }
